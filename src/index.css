@@ -1,3 +1,12 @@
+.app,
+.main-grid,
+.left-col,
+.right-col,
+.weather-card,
+.forecast,
+.outfit-card {
+  width: 100%;
+}
 html,
 body {
   width: 100%;
@@ -208,72 +217,94 @@ h1 {
 
 .loading { color: white; font-size: 20px; margin-top: 40px; }
 
-/* ── MOBILE (max 768px) ── */
-/* ── MOBILE (max 768px) ── */
 @media (max-width: 768px) {
 
   .app {
-    padding: 20px 12px;
+    padding: 15px 10px;
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
+    margin-bottom: 16px;
   }
 
   .search-box {
-    flex-direction: row;
     width: 100%;
+    margin-bottom: 20px;
+    gap: 8px;
   }
 
   .search-box input {
     min-width: 0;
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+
+  .search-box button {
+    padding: 12px 16px;
+    font-size: 14px;
+    white-space: nowrap;
   }
 
   .main-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    max-width: 100%;
+    gap: 15px;
+  }
+
+  .left-col,
+  .right-col {
+    width: 100%;
   }
 
   .weather-card {
     width: 100%;
-    padding: 24px 16px;
-    overflow: hidden;
+    padding: 20px 15px;
+    border-radius: 20px;
   }
 
   .weather-card .city {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  .weather-card .country {
+    font-size: 14px;
   }
 
   .weather-card .temp {
-    font-size: 64px;
+    font-size: 60px;
   }
 
   .weather-card .description {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .weather-card .weather-icon {
-    font-size: 60px;
+    font-size: 55px;
   }
 
   .stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .stat-item .label {
+    font-size: 12px;
   }
 
   .stat-item .value {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .forecast {
-    flex-direction: row;
+    display: flex;
     overflow-x: auto;
     gap: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     scrollbar-width: none;
   }
 
@@ -282,44 +313,52 @@ h1 {
   }
 
   .forecast-card {
-    min-width: 100px;
+    min-width: 95px;
+    padding: 12px;
     flex-direction: column;
     text-align: center;
-    padding: 14px;
+    border-radius: 14px;
   }
 
   .forecast-card .day {
     width: auto;
-    font-size: 13px;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .forecast-card .f-icon {
+    font-size: 22px;
+  }
+
+  .forecast-card .f-temp {
+    font-size: 15px;
   }
 
   .forecast-card .f-desc {
     display: none;
   }
 
-  .forecast-card .f-icon {
-    font-size: 24px;
-  }
-
-  .forecast-card .f-temp {
-    font-size: 16px;
-  }
-
   .outfit-card {
     width: 100%;
-    padding: 18px;
+    padding: 16px;
+  }
+
+  .outfit-card h3 {
+    font-size: 12px;
   }
 
   .outfit-card p {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.4;
   }
 
   .favourites {
     width: 100%;
+    gap: 8px;
   }
 
   .fav-btn {
-    font-size: 13px;
-    padding: 8px 12px;
+    font-size: 12px;
+    padding: 7px 12px;
   }
 }
