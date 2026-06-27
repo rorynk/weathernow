@@ -1,3 +1,8 @@
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
 * {
   margin: 0;
   padding: 0;
@@ -204,27 +209,117 @@ h1 {
 .loading { color: white; font-size: 20px; margin-top: 40px; }
 
 /* ── MOBILE (max 768px) ── */
+/* ── MOBILE (max 768px) ── */
 @media (max-width: 768px) {
+
+  .app {
+    padding: 20px 12px;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .search-box {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .search-box input {
+    min-width: 0;
+  }
+
   .main-grid {
     grid-template-columns: 1fr;
-    max-width: 500px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .weather-card {
+    width: 100%;
+    padding: 24px 16px;
+    overflow: hidden;
+  }
+
+  .weather-card .city {
+    font-size: 28px;
+  }
+
+  .weather-card .temp {
+    font-size: 64px;
+  }
+
+  .weather-card .description {
+    font-size: 18px;
+  }
+
+  .weather-card .weather-icon {
+    font-size: 60px;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .stat-item .value {
+    font-size: 16px;
   }
 
   .forecast {
     flex-direction: row;
     overflow-x: auto;
-    padding-bottom: 8px;
+    gap: 10px;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+  }
+
+  .forecast::-webkit-scrollbar {
+    display: none;
   }
 
   .forecast-card {
+    min-width: 100px;
     flex-direction: column;
-    min-width: 90px;
     text-align: center;
     padding: 14px;
   }
 
-  .forecast-card .day { width: auto; font-size: 13px; }
-  .forecast-card .f-desc { display: none; }
+  .forecast-card .day {
+    width: auto;
+    font-size: 13px;
+  }
 
-  .weather-card .temp { font-size: 72px; }
+  .forecast-card .f-desc {
+    display: none;
+  }
+
+  .forecast-card .f-icon {
+    font-size: 24px;
+  }
+
+  .forecast-card .f-temp {
+    font-size: 16px;
+  }
+
+  .outfit-card {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .outfit-card p {
+    font-size: 15px;
+  }
+
+  .favourites {
+    width: 100%;
+  }
+
+  .fav-btn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
 }
