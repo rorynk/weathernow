@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {useState}from "react";
 import axios from "axios";
 import Weather from "./components/Weather";
 import Forecast from "./components/Forecast";
@@ -17,7 +17,7 @@ function getBackground(condition, isNight) {
 }
 
 function getOutfit(temp, condition) {
-  const c = condition?.toLowerCase() || "";
+
   if (temp <= 10) return "🧥 Heavy coat, gloves, and a warm scarf — it's freezing out there!";
   if (temp <= 17) return "🧣 Light jacket or hoodie recommended. Layer up!";
   if (temp <= 24) return "👕 T-shirt and jeans is perfect for this weather.";
