@@ -1,4 +1,4 @@
-import {useState}from "react";
+import { useState } from "react";
 import axios from "axios";
 import Weather from "./components/Weather";
 import Forecast from "./components/Forecast";
